@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="550.0" prefWidth="1100.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <AreaChart fx:id="graficaInicial" layoutX="1166.0" layoutY="42.0" prefHeight="455.0" prefWidth="408.0" title="Primera Generación" visible="false" AnchorPane.bottomAnchor="53.0" AnchorPane.leftAnchor="1166.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="42.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </AreaChart>
+      <AreaChart fx:id="graficaOptimizada" layoutX="457.0" layoutY="55.0" prefHeight="443.0" prefWidth="613.0" title="Generación Optimizada" AnchorPane.bottomAnchor="52.0" AnchorPane.leftAnchor="757.0" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="55.0">
+         <xAxis>
+            <CategoryAxis side="BOTTOM" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis side="LEFT" />
+         </yAxis>
+      </AreaChart>
+      <Button layoutX="43.0" layoutY="472.0" mnemonicParsing="false" onAction="#ejecutarAlgoritmo" prefHeight="25.0" prefWidth="135.0" text="Ejecutar Optimización" />
+      <ListView fx:id="valorFXOptimizado" layoutX="444.0" layoutY="83.0" prefHeight="163.0" prefWidth="156.0" />
+      <ListView fx:id="valorFXInicial" layoutX="455.0" layoutY="334.0" prefHeight="163.0" prefWidth="147.0" />
+      <ListView fx:id="valorDecodificadoInicial" layoutX="361.0" layoutY="334.0" prefHeight="163.0" prefWidth="94.0" />
+      <ListView fx:id="valorDecodificadoOptimizado" layoutX="357.0" layoutY="83.0" prefHeight="163.0" prefWidth="94.0" />
+      <ListView fx:id="elementosOptimizados" layoutX="223.0" layoutY="83.0" prefHeight="163.0" prefWidth="135.0" />
+      <ListView fx:id="elementosIniciales" layoutX="223.0" layoutY="334.0" prefHeight="163.0" prefWidth="137.0" />
+      <Label layoutX="242.0" layoutY="56.0" text="Elementos Rp">
+         <font>
+            <Font name="Berlin Sans FB" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="362.0" layoutY="58.0" text="Decodificados">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="496.0" layoutY="56.0" text="Trabajo">
+         <font>
+            <Font name="Berlin Sans FB" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="242.0" layoutY="309.0" text="Elementos Rp">
+         <font>
+            <Font name="Berlin Sans FB" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="366.0" layoutY="310.0" text="Decodificados">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="502.0" layoutY="309.0" text="Trabajo">
+         <font>
+            <Font name="Berlin Sans FB" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="14.0" text="Optimización Mediante Algoritmo Genético">
+         <font>
+            <Font name="Bell MT" size="23.0" />
+         </font>
+      </Label>
+      <TextField fx:id="coeficienteMutacion" layoutX="26.0" layoutY="326.0" />
+      <TextField fx:id="numeroGeneraciones" layoutX="25.0" layoutY="390.0" />
+      <Label layoutX="44.0" layoutY="301.0" text="Coeficiente Mutación" />
+      <Label layoutX="28.0" layoutY="363.0" text="Número de Generaciones" />
+      <ChoiceBox fx:id="metodoCruza" layoutX="36.0" layoutY="423.0" prefWidth="150.0" />
+      <Label layoutX="65.0" layoutY="83.0" text="Temperatura1" />
+      <Label layoutX="65.0" layoutY="136.0" text="Temperatura3" />
+      <Label layoutX="65.0" layoutY="187.0" text="Cp" />
+      <Label layoutX="143.0" layoutY="187.0" text="K" />
+      <TextField fx:id="temperatura1Input" layoutX="27.0" layoutY="104.0" />
+      <TextField fx:id="temperatura3Input" layoutX="25.0" layoutY="152.0" />
+      <TextField fx:id="cpInput" layoutX="53.0" layoutY="210.0" prefHeight="25.0" prefWidth="42.0" />
+      <TextField fx:id="Kinput" layoutX="122.0" layoutY="210.0" prefHeight="25.0" prefWidth="42.0" />
+      <Label layoutX="41.0" layoutY="261.0" text="Variables del Algoritmo G">
+         <font>
+            <Font name="FreeSans Oblique" size="13.0" />
+         </font>
+      </Label>
+      <ListView fx:id="eficienciaOptimizada" layoutX="596.0" layoutY="83.0" prefHeight="163.0" prefWidth="135.0" />
+      <Label layoutX="630.0" layoutY="56.0" text="Eficiencia">
+         <font>
+            <Font name="Berlin Sans FB" size="14.0" />
+         </font>
+      </Label>
+      <ListView fx:id="eficienciaInicial" layoutX="597.0" layoutY="334.0" prefHeight="163.0" prefWidth="135.0" />
+      <Label layoutX="631.0" layoutY="309.0" text="Eficiencia">
+         <font>
+            <Font name="Berlin Sans FB" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="1052.0" layoutY="490.0" text="Eficiencia" />
+      <Label layoutX="751.0" layoutY="277.0" text="W" />
+   </children>
+</AnchorPane>
